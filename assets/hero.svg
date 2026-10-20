@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1022" />
+      <stop offset="50%" stop-color="#070b16" />
+      <stop offset="100%" stop-color="#05070e" />
+    </linearGradient>
+
+    <linearGradient id="hero-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Dot Matrix Pattern -->
+    <pattern id="dot-matrix" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#247bff" fill-opacity="0.15" />
+    </pattern>
+
+    <!-- Clip Paths -->
+    <clipPath id="hero-card-clip">
+      <rect x="0" y="0" width="880" height="340" rx="24" />
+    </clipPath>
+
+    <clipPath id="name-mask">
+      <rect x="0" y="0" width="600" height="60" />
+    </clipPath>
+
+    <clipPath id="avatar-clip">
+      <circle cx="110" cy="110" r="95" />
+    </clipPath>
+
+    <style>
+      @keyframes nameRise {
+        0% { transform: translateY(60px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes roleCycle {
+        0%, 20% { opacity: 1; transform: translateY(0); }
+        25%, 95% { opacity: 0; transform: translateY(-15px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.05); }
+      }
+
+      .txt-mono { font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
+      .txt-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      
+      .name-text {
+        animation: nameRise 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .cursor {
+        animation: blinkCursor 0.9s infinite;
+      }
+      
+      .role-1 { animation: roleCycle 12s 0s infinite; }
+      .role-2 { animation: roleCycle 12s 3s infinite; opacity: 0; }
+      .role-3 { animation: roleCycle 12s 6s infinite; opacity: 0; }
+      .role-4 { animation: roleCycle 12s 9s infinite; opacity: 0; }
+      
+      .glow-orb {
+        transform-origin: center;
+        animation: pulseGlow 6s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Card -->
+  <g clip-path="url(#hero-card-clip)">
+    <rect width="880" height="340" fill="url(#hero-bg)" />
+    <rect width="880" height="340" fill="url(#dot-matrix)" />
+
+    <!-- Ambient Lighting Orbs -->
+    <circle class="glow-orb" cx="120" cy="170" r="140" fill="#247bff" filter="blur(60px)" opacity="0.3" />
+    <circle class="glow-orb" cx="820" cy="280" r="130" fill="#ff354f" filter="blur(60px)" opacity="0.25" />
+
+    <!-- Left: Portrait Container -->
+    <g transform="translate(45, 60)">
+      <!-- Outer Rim Ring -->
+      <circle cx="110" cy="110" r="102" fill="none" stroke="url(#hero-border)" stroke-width="2.5" />
+      <circle cx="110" cy="110" r="95" fill="#070b16" />
+      <g clip-path="url(#avatar-clip)">
+        
+      </g>
+      <!-- Online Status Badge -->
+      <circle cx="185" cy="185" r="12" fill="#070b16" />
+      <circle cx="185" cy="185" r="8" fill="#00e676" />
+    </g>
+
+    <!-- Right: Personal Details & Typographic Reveal -->
+    <g transform="translate(300, 75)">
+      <!-- Subtitle / Terminal greeting -->
+      <g transform="translate(0, 0)">
+        <text class="txt-mono" x="0" y="0" fill="#247bff" font-size="14" font-weight="600" letter-spacing="1.5">
+          > HELLO_WORLD // GREETINGS_
+        </text>
+        <rect class="cursor" x="225" y="-12" width="8" height="15" fill="#247bff" />
+      </g>
+
+      <!-- Rising Mask Name Reveal -->
+      <g transform="translate(0, 15)" clip-path="url(#name-mask)">
+        <text class="txt-display name-text" x="0" y="44" fill="#ffffff" font-size="44" font-weight="800" letter-spacing="-0.5">
+          Ritik Yadav
+        </text>
+      </g>
+
+      <!-- Dynamic Rotating Roles -->
+      <g transform="translate(0, 92)" class="txt-mono" font-size="17" font-weight="600">
+        <text class="role-1" x="0" y="0" fill="#ff354f">AI Builder ⚡</text>
+        <text class="role-2" x="0" y="0" fill="#247bff">Full-Stack Dev 🚀</text>
+        <text class="role-3" x="0" y="0" fill="#ff9100">Java Developer ☕</text>
+        <text class="role-4" x="0" y="0" fill="#00e5ff">Backend Engineer ⚙️</text>
+      </g>
+
+      <!-- One Line Pitch -->
+      <text class="txt-display" x="0" y="130" fill="#94a3b8" font-size="15" font-weight="400" letter-spacing="0.2">
+        Building the future with code, AI, and Gen-Z energy.
+      </text>
+
+      <!-- Badges / Location Row -->
+      <g transform="translate(0, 160)">
+        <!-- Location Chip -->
+        <rect x="0" y="0" width="130" height="30" rx="15" fill="#141c33" stroke="#247bff" stroke-opacity="0.3" stroke-width="1" />
+        <text class="txt-mono" x="15" y="19" fill="#e2e8f0" font-size="12">📍 NCR, India</text>
+
+        <!-- Role Focus Chip -->
+        <rect x="142" y="0" width="220" height="30" rx="15" fill="#141c33" stroke="#ff354f" stroke-opacity="0.3" stroke-width="1" />
+        <text class="txt-mono" x="157" y="19" fill="#e2e8f0" font-size="12">MERN + SpringBoot AI</text>
+      </g>
+    </g>
+
+    <!-- Card Outer Border -->
+    <rect width="880" height="340" rx="24" fill="none" stroke="url(#hero-border)" stroke-width="2" />
+  </g>
+</svg>

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stack-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b16" />
+      <stop offset="100%" stop-color="#0a1122" />
+    </linearGradient>
+
+    <style>
+      .txt-mono { font-family: 'SF Mono', Consolas, monospace; }
+      .txt-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      
+      @keyframes orbitClockwise {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbitCounter {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes keepUpright {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+
+      .orbit-1 { transform-origin: 210px 200px; animation: orbitClockwise 28s linear infinite; }
+      .orbit-2 { transform-origin: 210px 200px; animation: orbitCounter 38s linear infinite; }
+      .orbit-3 { transform-origin: 210px 200px; animation: orbitClockwise 48s linear infinite; }
+      
+      .chip-text { fill: #e2e8f0; font-size: 12px; font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="880" height="400" rx="20" fill="url(#stack-bg)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- LEFT: Elliptical Planetary Tech Radar -->
+  <g id="radar-group">
+    <!-- Center Core -->
+    <circle cx="210" cy="200" r="32" fill="#101935" stroke="#247bff" stroke-width="2" />
+    <text class="txt-mono" x="210" y="205" text-anchor="middle" fill="#247bff" font-size="13" font-weight="700">CORE</text>
+
+    <!-- Ring 1 -->
+    <ellipse cx="210" cy="200" rx="75" ry="55" fill="none" stroke="#247bff" stroke-opacity="0.35" stroke-dasharray="3 3" />
+    <g class="orbit-1">
+      <g transform="translate(285, 200)">
+        <circle cx="0" cy="0" r="16" fill="#141c33" stroke="#247bff" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#ffffff" font-size="10">JS</text>
+      </g>
+      <g transform="translate(135, 200)">
+        <circle cx="0" cy="0" r="16" fill="#141c33" stroke="#ff354f" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#ffffff" font-size="10">JAVA</text>
+      </g>
+    </g>
+
+    <!-- Ring 2 -->
+    <ellipse cx="210" cy="200" rx="125" ry="90" fill="none" stroke="#6366f1" stroke-opacity="0.25" stroke-dasharray="4 4" />
+    <g class="orbit-2">
+      <g transform="translate(210, 110)">
+        <circle cx="0" cy="0" r="18" fill="#141c33" stroke="#00e5ff" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#00e5ff" font-size="9.5">REACT</text>
+      </g>
+      <g transform="translate(210, 290)">
+        <circle cx="0" cy="0" r="18" fill="#141c33" stroke="#00e676" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#00e676" font-size="9.5">SPRING</text>
+      </g>
+      <g transform="translate(85, 200)">
+        <circle cx="0" cy="0" r="18" fill="#141c33" stroke="#ff9100" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#ff9100" font-size="9.5">NODE</text>
+      </g>
+    </g>
+
+    <!-- Ring 3 -->
+    <ellipse cx="210" cy="200" rx="175" ry="130" fill="none" stroke="#ff354f" stroke-opacity="0.2" stroke-dasharray="5 5" />
+    <g class="orbit-3">
+      <g transform="translate(385, 200)">
+        <circle cx="0" cy="0" r="16" fill="#141c33" stroke="#ff354f" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#ffffff" font-size="9">AI</text>
+      </g>
+      <g transform="translate(35, 200)">
+        <circle cx="0" cy="0" r="16" fill="#141c33" stroke="#247bff" stroke-width="1.5" />
+        <text class="txt-mono" x="0" y="4" text-anchor="middle" fill="#ffffff" font-size="9">POSTGRE</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT: Structured Category Chips -->
+  <g transform="translate(430, 40)">
+    <text class="txt-mono" x="0" y="0" fill="#247bff" font-size="12" font-weight="600" letter-spacing="1.5">// TECH MATRIX</text>
+    <text class="txt-display" x="0" y="28" fill="#ffffff" font-size="22" font-weight="700">Languages & Frameworks</text>
+
+    <!-- Group 1: Core Stack -->
+    <g transform="translate(0, 50)">
+      <text class="txt-mono" x="0" y="0" fill="#94a3b8" font-size="12">LANGUAGES & RUNTIMES</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="60" height="26" rx="6" fill="#141d33" stroke="#247bff" stroke-width="1" />
+        <text class="txt-mono chip-text" x="12" y="17">Java</text>
+        <rect x="70" y="0" width="100" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="80" y="17">JavaScript</text>
+        <rect x="180" y="0" width="75" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="190" y="17">Node.js</text>
+        <rect x="265" y="0" width="95" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="275" y="17">Express.js</text>
+      </g>
+    </g>
+
+    <!-- Group 2: Frontend & Frameworks -->
+    <g transform="translate(0, 125)">
+      <text class="txt-mono" x="0" y="0" fill="#94a3b8" font-size="12">FRAMEWORKS & CLIENT</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="65" height="26" rx="6" fill="#141d33" stroke="#ff354f" stroke-width="1" />
+        <text class="txt-mono chip-text" x="12" y="17">React</text>
+        <rect x="75" y="0" width="105" height="26" rx="6" fill="#141d33" stroke="#00e676" stroke-width="1" />
+        <text class="txt-mono chip-text" x="85" y="17">Spring Boot</text>
+        <rect x="190" y="0" width="105" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="200" y="17">Tailwind CSS</text>
+        <rect x="305" y="0" width="55" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="315" y="17">Vite</text>
+      </g>
+    </g>
+
+    <!-- Group 3: Data & Cloud -->
+    <g transform="translate(0, 200)">
+      <text class="txt-mono" x="0" y="0" fill="#94a3b8" font-size="12">DATABASE, CLOUD & AI</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="85" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="10" y="17">MongoDB</text>
+        <rect x="95" y="0" width="100" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="105" y="17">PostgreSQL</text>
+        <rect x="205" y="0" width="60" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="215" y="17">AWS</text>
+        <rect x="275" y="0" width="95" height="26" rx="6" fill="#141d33" stroke="#247bff" stroke-width="1" />
+        <text class="txt-mono chip-text" x="285" y="17">AI / LLMs</text>
+      </g>
+    </g>
+
+    <!-- Group 4: Tools & Standards -->
+    <g transform="translate(0, 275)">
+      <text class="txt-mono" x="0" y="0" fill="#94a3b8" font-size="12">STANDARDS & DEVTOOLS</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="50" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="12" y="17">Git</text>
+        <rect x="60" y="0" width="70" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="70" y="17">GitHub</text>
+        <rect x="140" y="0" width="80" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="150" y="17">Postman</text>
+        <rect x="230" y="0" width="55" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="240" y="17">JWT</text>
+        <rect x="295" y="0" width="90" height="26" rx="6" fill="#141d33" />
+        <text class="txt-mono chip-text" x="305" y="17">REST APIs</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="about-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b16" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+
+    <linearGradient id="bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#247bff" />
+      <stop offset="100%" stop-color="#ff354f" />
+    </linearGradient>
+
+    <style>
+      .txt-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; fill: #ffffff; }
+      .txt-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13.5px; fill: #94a3b8; }
+      .txt-mono { font-family: 'SF Mono', Consolas, monospace; }
+
+      /* 12s total loop: 3 slides x 4s */
+      @keyframes slide1 {
+        0%, 30% { opacity: 1; transform: translateY(0); }
+        33.3%, 100% { opacity: 0; transform: translateY(12px); }
+      }
+      @keyframes slide2 {
+        0%, 33.3% { opacity: 0; transform: translateY(12px); }
+        36.6%, 63.3% { opacity: 1; transform: translateY(0); }
+        66.6%, 100% { opacity: 0; transform: translateY(12px); }
+      }
+      @keyframes slide3 {
+        0%, 66.6% { opacity: 0; transform: translateY(12px); }
+        70%, 96.6% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(12px); }
+      }
+
+      /* Segment Progress Animations */
+      @keyframes progressFill1 {
+        0% { width: 0; }
+        33.3% { width: 100px; }
+        33.4%, 100% { width: 100px; }
+      }
+      @keyframes progressFill2 {
+        0%, 33.3% { width: 0; }
+        66.6% { width: 100px; }
+        66.7%, 100% { width: 100px; }
+      }
+      @keyframes progressFill3 {
+        0%, 66.6% { width: 0; }
+        100% { width: 100px; }
+      }
+
+      .slide-1 { animation: slide1 12s infinite; }
+      .slide-2 { animation: slide2 12s infinite; }
+      .slide-3 { animation: slide3 12s infinite; }
+
+      .p-bar-1 { animation: progressFill1 12s infinite linear; }
+      .p-bar-2 { animation: progressFill2 12s infinite linear; }
+      .p-bar-3 { animation: progressFill3 12s infinite linear; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="300" rx="20" fill="url(#about-bg)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- LEFT COLUMN: Engineering Capabilities -->
+  <g transform="translate(45, 40)">
+    <text class="txt-mono" x="0" y="0" fill="#247bff" font-size="12" font-weight="600" letter-spacing="1.2">// WHAT I DO</text>
+    <text class="txt-title" x="0" y="32" font-size="22">Engineering Pillars</text>
+    
+    <g transform="translate(0, 58)">
+      <!-- Item 1 -->
+      <circle cx="8" cy="8" r="4" fill="#247bff" />
+      <text class="txt-title" x="24" y="12" font-size="15">Full-Stack Architecture</text>
+      <text class="txt-body" x="24" y="32">Modern React frontends integrated with resilient Node/Express backends.</text>
+
+      <!-- Item 2 -->
+      <circle cx="8" cy="68" r="4" fill="#ff354f" />
+      <text class="txt-title" x="24" y="72" font-size="15">Enterprise Spring Boot</text>
+      <text class="txt-body" x="24" y="92">High-performance microservices, REST APIs, JPA, and clean modular code.</text>
+
+      <!-- Item 3 -->
+      <circle cx="8" cy="128" r="4" fill="#00e5ff" />
+      <text class="txt-title" x="24" y="132" font-size="15">AI & Applied Innovations</text>
+      <text class="txt-body" x="24" y="152">Integrating intelligent LLM workflows, automated pipelines & modern cloud stacks.</text>
+    </g>
+  </g>
+
+  <!-- Divider -->
+  <line x1="470" y1="35" x2="470" y2="265" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4 4" />
+
+  <!-- RIGHT COLUMN: 3-Slide Interests Carousel -->
+  <g transform="translate(515, 40)">
+    <text class="txt-mono" x="0" y="0" fill="#ff354f" font-size="12" font-weight="600" letter-spacing="1.2">// INTERESTS & PASSIONS</text>
+    
+    <!-- Progress Indicator Bars -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="100" height="4" rx="2" fill="#1e293b" />
+      <rect class="p-bar-1" x="0" y="0" height="4" rx="2" fill="url(#bar-grad)" />
+
+      <rect x="110" y="0" width="100" height="4" rx="2" fill="#1e293b" />
+      <rect class="p-bar-2" x="110" y="0" height="4" rx="2" fill="url(#bar-grad)" />
+
+      <rect x="220" y="0" width="100" height="4" rx="2" fill="#1e293b" />
+      <rect class="p-bar-3" x="220" y="0" height="4" rx="2" fill="url(#bar-grad)" />
+    </g>
+
+    <!-- Carousel Slides Container -->
+    <g transform="translate(0, 65)">
+      <!-- Slide 1 -->
+      <g class="slide-1">
+        <rect width="320" height="135" rx="12" fill="#0c1427" stroke="#247bff" stroke-opacity="0.3" stroke-width="1" />
+        <text x="20" y="42" font-size="28">⚡</text>
+        <text class="txt-title" x="65" y="40" font-size="17">Building Cool Projects</text>
+        <text class="txt-body" x="20" y="76">Transforming spontaneous ideas into production-ready web apps with intuitive UI and clean architecture.</text>
+      </g>
+
+      <!-- Slide 2 -->
+      <g class="slide-2">
+        <rect width="320" height="135" rx="12" fill="#0c1427" stroke="#ff354f" stroke-opacity="0.3" stroke-width="1" />
+        <text x="20" y="42" font-size="28">🤖</text>
+        <text class="txt-title" x="65" y="40" font-size="17">Exploring AI & Tech</text>
+        <text class="txt-body" x="20" y="76">Deep-diving into LLM tooling, agent workflows, automated inference, and modern developer infrastructure.</text>
+      </g>
+
+      <!-- Slide 3 -->
+      <g class="slide-3">
+        <rect width="320" height="135" rx="12" fill="#0c1427" stroke="#00e5ff" stroke-opacity="0.3" stroke-width="1" />
+        <text x="20" y="42" font-size="28">🏆</text>
+        <text class="txt-title" x="65" y="40" font-size="17">Hackathons & Innovation</text>
+        <text class="txt-body" x="20" y="76">Sprint-building high-impact public tools, social solutions, and competing in collaborative developer events.</text>
+      </g>
+    </g>
+  </g>
+</svg>
