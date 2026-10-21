@@ -1,17 +1,18 @@
+@'
 <div align="center">
-  <img src="assets/hero.svg?v=1" alt="Ritik Yadav Hero Banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/ritikyadav489455-eng/ritikyadav489455-eng/main/assets/hero.svg" alt="Ritik Yadav Hero Banner" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="assets/about-life.svg?v=1" alt="Capabilities and Interests" width="100%" />
+  <img src="https://raw.githubusercontent.com/ritikyadav489455-eng/ritikyadav489455-eng/main/assets/about-life.svg" alt="Capabilities and Interests" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="assets/stack.svg?v=1" alt="Tech Stack and Orbit Radar" width="100%" />
+  <img src="https://raw.githubusercontent.com/ritikyadav489455-eng/ritikyadav489455-eng/main/assets/stack.svg" alt="Tech Stack and Orbit Radar" width="100%" />
 </div>
 
 <br/>
@@ -27,14 +28,14 @@
 <br/>
 
 <div align="center">
-  <img src="assets/id-dashboard.svg?v=1" alt="Developer ID and Verification" width="100%" />
+  <img src="https://raw.githubusercontent.com/ritikyadav489455-eng/ritikyadav489455-eng/main/assets/id-dashboard.svg" alt="Developer ID and Verification" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
   <a href="https://linkedin.com/in/ritik-yadav-b49260289">
-    <img src="assets/connect.svg?v=1" alt="Connect with Ritik" width="100%" />
+    <img src="https://raw.githubusercontent.com/ritikyadav489455-eng/ritikyadav489455-eng/main/assets/connect.svg" alt="Connect with Ritik" width="100%" />
   </a>
 </div>
 
@@ -47,3 +48,4 @@
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ritikyadav489455-eng)
 
 </div>
+'@ | Out-File -FilePath "README.md" -Encoding utf8
